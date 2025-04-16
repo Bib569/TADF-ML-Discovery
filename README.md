@@ -3,7 +3,7 @@ A physics-guided machine learning framework for accelerated discovery of Thermal
 
 ## Overview
 
-This project implements a physics-guided machine learning model to predict the singlet-triplet energy gap (delE) in organic molecules based on quantum chemical descriptors. The framework uses a gradient boosting regressor with a physics-informed custom loss function to improve prediction accuracy.
+This project implements a physics-guided machine learning model to predict the singlet-triplet energy gap (∆EST) in organic molecules based on quantum chemical descriptors. The framework uses a gradient boosting regressor with a physics-informed custom loss function to improve prediction accuracy.
 
 ## Paper
 
@@ -13,8 +13,7 @@ This repository contains code and documentation for the paper:
 ### Authors
 Sanyam¹, Bibhas Das¹, and Anirban Mondal¹,*
 
-¹Department of Chemistry, Indian Institute of Technology Gandhinagar, Gujarat, 382355, India  
-²Department of Materials Engineering, Indian Institute of Technology Gandhinagar, Gujarat, 382355, India
+¹Department of Chemistry, Indian Institute of Technology Gandhinagar, Gujarat, 382355, India
 
 *Email: amondal@iitgn.ac.in
 
@@ -36,7 +35,7 @@ Sanyam¹, Bibhas Das¹, and Anirban Mondal¹,*
 
 ## Introduction
 
-This repository provides the implementation of an efficient machine learning approach to predicting singlet-triplet energy gaps (delE) in organic molecules. The framework combines gradient boosting with a physics-informed custom loss function to accurately predict excited state properties critical for the discovery of new TADF emitters. By incorporating quantum chemical principles into the machine learning model, we achieve improved predictive performance while maintaining physical consistency in the predictions.
+This repository provides the implementation of an efficient machine learning approach to predicting singlet-triplet energy gaps (∆EST) in organic molecules. The framework combines gradient boosting with a physics-informed custom loss function to accurately predict excited state properties critical for the discovery of new TADF emitters. By incorporating quantum chemical principles into the machine learning model, we achieve improved predictive performance while maintaining physical consistency in the predictions.
 
 ## Workflow
 
