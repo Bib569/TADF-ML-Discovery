@@ -82,13 +82,12 @@ pip install -r requirements.txt
 ```
 delE-prediction/
 ├── data/                     # Data directory
-│   ├── merged_dataset.csv    # Training dataset
-│   ├── del_E_SISSO - Sheet1.csv    # Unknown molecules dataset
-│   ├── delE_PIML - experimental.csv    # Experimental dataset
-│   └── Newly_generated_moleucles_delE.xlsx    # Generated molecules
+│   ├── delE_dataset.csv      # Training dataset for combined delE
+│   ├── f_dataset.csv         # Training dataset for f
+│   └── Newly_generated_moleucles.xlsx    # Generated molecules
 ├── results/                  # Results directory for outputs
 ├── README.md                 # Project documentation
-├── requirements.txt          # Required packages
+├── Requirements.txt          # Required packages
 ├── Optuna_hyperparameter_tuning_combined_delE.py  # Hyperparameter optimization Code
 ├── PIML_combined_delE.py     # Main codes   
 └── PIML_f.py                  
