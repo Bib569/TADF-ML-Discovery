@@ -66,8 +66,8 @@ The code is designed to:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/delE-prediction.git
-cd delE-prediction
+git clone https://github.com/Bib569/TADF-ML-Discovery.git
+cd TADF-ML-Discovery
 
 # Set up a virtual environment (optional but recommended)
 python -m venv venv
