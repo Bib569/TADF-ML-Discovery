@@ -63,19 +63,19 @@ def custom_loss(y_true, y_pred, predictors):
     float
         Total loss value (MSE + custom loss).
     """
-    # Define coefficients - these would need to be optimized for f prediction
-    a0 = 2.34e+04
-    a1 = 5.12e-05
-    a2 = 3.76e-01
-    a3 = -3.98e+03
-    c0 = -3.15e-01
+    # Define coefficients
+    a0 = -1.680473076584391e+07
+    a1 = -2.231832803803058e+02
+    a2 = 1.096478121038685e+00
+    a3 = -3.368993809566352e+02
+    c0 = 2.310214321365801e-02
 
-    # Calculate loss using the equation - this would need adaptation for f property
-    loss = (
+    # Calculate loss using the updated equation
+    physics loss = (
         c0 +
-        a0 * ((predictors['s1_cis'] ** 2) * (predictors['homo_lumo_overlap'] * predictors['dsp_scf'])) +
-        a1 * ((predictors['homo_lumo_overlap'] ** 4) / (predictors['exchange_integral'] ** 2)) +
-        a2 * np.abs(predictors['s1_cis'] - (predictors['homo_lumo_overlap'] * predictors['dipole_moment'])) +
+        a0 * (np.exp(-1.0 * (predictors['homo_lumo_overlap'] / predictors['exchange_integral']))) +
+        a1 * ((predictors['exchange_integral'] / predictors['homo_lumo_overlap']) * np.abs(predictors['dsp_scf'])) +
+        a2 * (np.abs(predictors['exchange_integral'] - predictors['t1_cis']) - (predictors['homo_lumo_overlap'] * predictors['t1_cis'])) +
         a3 * ((predictors['exchange_integral'] ** 2) * np.log(predictors['homo_lumo_overlap']))
     )
 
@@ -83,7 +83,7 @@ def custom_loss(y_true, y_pred, predictors):
     mse = np.mean((y_true - y_pred) ** 2)
 
     # Return the total loss as MSE + loss
-    return mse + loss
+    return mse + physics loss
 
 def load_and_preprocess_data(data_path, selected_descriptors):
     """
@@ -122,10 +122,15 @@ def load_and_preprocess_data(data_path, selected_descriptors):
     
     return scl_inp, inp_scl, targets_scl, target_scaler
 
-def train_model(x_train, y_train, n_estimators=850, learning_rate=0.015, 
-                max_depth=8, min_samples_split=12, min_samples_leaf=3, 
-                subsample=0.85, max_features=0.9, 
-                random_state=16043):
+def train_model(x_train, y_train, 
+                n_estimators=640, 
+                learning_rate=0.016148348711864893, 
+                max_depth=9, 
+                min_samples_split=6, 
+                min_samples_leaf=5, 
+                subsample=0.5553987709200139, 
+                max_features=0.6083122464578106, 
+                random_state=17882):
     """
     Train a Gradient Boosting model with custom loss function.
     
