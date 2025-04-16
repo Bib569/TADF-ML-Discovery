@@ -148,8 +148,6 @@ The model uses the following quantum chemical descriptors:
 The model evaluates performance using:
 - RMSE (Root Mean Squared Error)
 - MAE (Mean Absolute Error)
-- MAPE (Mean Absolute Percentage Error)
-- R² score
 - Pearson correlation coefficient
 
 Visualizations include:
@@ -184,4 +182,4 @@ If you use this code in your research, please cite:
 
 ## Contact
 
-For questions or feedback, please [open an issue](https://github.com/yourusername/delE-prediction/issues) or contact [amondal@iitgn.ac.in]. 
+For questions or feedback, please [open an issue](https://github.com/Bib569/TADF-ML-Discovery/issues) or contact [amondal@iitgn.ac.in]. 
