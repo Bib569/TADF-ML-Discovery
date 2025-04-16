@@ -96,10 +96,11 @@ delE-prediction/
 ## Usage
 
 1. Prepare your data files in the `data/` directory
-2. Run the main script:
+2. Run the main scripts:
 
 ```bash
-python def_create_elbow_analysis.py
+python PIML_combined_delE.py
+python PIML_combined_f.py
 ```
 
 3. Find results in the `results/` directory
