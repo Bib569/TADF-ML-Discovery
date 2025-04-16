@@ -119,7 +119,7 @@ def custom_loss(y_true, y_pred, predictors):
     c0 = -2.395860624894289e-01
 
     # Calculate loss using the equation
-    loss = (
+    physics loss = (
         c0 +
         a0 * ((predictors['t1_cis'] ** 3) * (predictors['homo_lumo_overlap'] * predictors['dsp_scf'])) +
         a1 * ((predictors['homo_lumo_overlap'] ** 6) / (predictors['exchange_integral'] ** 2)) +
@@ -131,7 +131,7 @@ def custom_loss(y_true, y_pred, predictors):
     mse = np.mean((y_true - y_pred) ** 2)
 
     # Return the total loss as MSE + loss
-    return mse + loss
+    return mse + physics loss
 ```
 
 ## Key Descriptors
