@@ -171,7 +171,7 @@ To use the model for your own dataset:
 If you use this code in your research, please cite:
 
 ```
-@article{TADF_ML_2023,
+@article{TADF_ML_2025,
   author = {Sanyam and Das, Bibhas and Mondal, Anirban},
   title = {Accelerated Discovery of TADF Emitters via Physics-Guided Machine Learning of Excited-State Properties},
   journal = {},
