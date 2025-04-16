@@ -82,7 +82,7 @@ pip install -r requirements.txt
 ```
 delE-prediction/
 ├── data/                     # Data directory
-│   ├── delE_dataset.csv      # Training dataset for combined delE
+│   ├── combined_delE_dataset.csv  # Training dataset for combined delE
 │   ├── f_dataset.csv         # Training dataset for f
 │   └── Newly_generated_moleucles.xlsx    # Generated molecules
 ├── results/                  # Results directory for outputs
