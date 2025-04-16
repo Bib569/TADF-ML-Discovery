@@ -428,7 +428,7 @@ def main():
     
     # Split data into training and testing sets
     x_train, x_test, y_train, y_test = train_test_split(
-        scl_inp, targets_scl, test_size=0.2, random_state=16043
+        scl_inp, targets_scl, test_size=0.2, random_state=17882
     )
     
     # Train the model
